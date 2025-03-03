@@ -1,0 +1,90 @@
+<script>
+function decowindow(sourceobj){
+window.open("decowindow.html?sourceobj="+sourceobj,"decowindow","width=880,height=520,directories=no,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,top=0,left=10");
+}	//func
+</script>
+<script>
+<!--
+function kakunin(){
+
+if (document.form1.title.value == '') {
+alert('タイトルが入力されていません。');
+return(false);
+}
+
+if(window.confirm("この内容で登録します。\nよろしければ「OK」を押して下さい。\n修正する場合には「キャンセル」を押して下さい。")){
+return true;
+}
+
+return false;
+}
+-->
+</script>
+<style type="text/css">
+<!--
+.attention {
+	font-size: small;
+	color: red;
+}
+-->
+</style>
+<form action="%cgifile%" method="post" enctype="multipart/form-data" name="form1" id="form1" onSubmit="return kakunin()" >
+<input name="code" type="hidden" id="code" value="%code%" />
+<input name="serial" type="hidden" id="serial" value="%serial%" />
+<input name="contents" type="hidden" id="contents" value="%contents%" />
+<table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#666666" class="text-12">
+<tr>
+<td align="center" bgcolor="#FFFFFF">公開の有無</td>
+<td bgcolor="#FFFFFF"><p>
+<input type="radio" name="koukaiflag" id="radio" value="0" %koukaiflag0% />
+公開する
+<input type="radio" name="koukaiflag" id="radio" value="1" %koukaiflag1% />
+公開しない</p></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF">公開日時<br />
+</td>
+<td bgcolor="#FFFFFF">
+<p> %nichiji% <br />
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF">公開期限<br />
+</td>
+<td bgcolor="#FFFFFF">
+%nichiji_from% ～ %nichiji_to% 
+<span class="attention"><br />
+※登録年月日が同じ場合、無期限に表示されます。 </span></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF">表示順序<br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="sortnum" type="text" id="sortnum" value="%sortnum%" size="8" />
+<span class="attention">※数字の大きいほうが上に表示されます。 </span></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF">タイトル<br />
+</td>
+<td bgcolor="#FFFFFF">
+<textarea name="title" cols="100%" rows="2" id="title">%title%</textarea>
+</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF">URL<br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="body" type="text" id="body" value="%body%" size="100%" />
+</td>
+</tr>
+
+
+
+
+<tr>
+<td colspan="2" align="center" bgcolor="#FFFFFF"><br />
+<input type="submit" name="button" id="button" value="登録"  style="width:100px"/ ></td>
+</tr>
+</table>
+</form>

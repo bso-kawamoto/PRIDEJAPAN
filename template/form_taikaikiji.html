@@ -1,0 +1,112 @@
+<script>
+function decowindow(sourceobj){
+window.open("decowindow.html?sourceobj="+sourceobj,"decowindow","width=880,height=520,directories=no,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,top=0,left=10");
+}	//func
+</script>
+<script>
+<!--
+function kakunin(){
+
+if (document.form1.title.value == '') {
+alert('タイトルが入力されていません。');
+return(false);
+}
+
+if (document.form1.body.value == '') {
+alert('本文が入力されていません。');
+return(false);
+}
+
+if(window.confirm("この内容で登録します。\nよろしければ「OK」を押して下さい。\n修正する場合には「キャンセル」を押して下さい。")){
+return true;
+}
+
+return false;
+}
+-->
+</script>
+<style type="text/css">
+<!--
+.style1 {
+	font-size: small;
+	color: red;
+}
+-->
+</style>
+<form action="webpal.cgi" method="post" enctype="multipart/form-data" name="form1" id="form1" onSubmit="return kakunin()" >
+<input name="code" type="hidden" id="code" value="%code%" />
+<input name="serial" type="hidden" id="serial" value="%serial%" />
+<input name="contents" type="hidden" id="contents" value="%contents%" />
+<input name="taikaicode" type="hidden" id="taikaicode" value="%taikaicode%" />
+
+<table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#666666" class="text-12">
+<tr>
+<td align="center" bgcolor="#FFFFFF">公開の有無</td>
+<td bgcolor="#FFFFFF"><p>
+<input type="radio" name="koukaiflag" id="radio" value="0" %koukaiflag0% />
+公開する
+<input type="radio" name="koukaiflag" id="radio" value="1" %koukaiflag1% />
+公開しない</p></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF">公開年月日<br /></td>
+<td bgcolor="#FFFFFF">
+<p> %nichiji% <br />
+</p></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF">大会名称</td>
+<td bgcolor="#FFFFFF">%taikainame%</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF">大会情報</td>
+<td bgcolor="#FFFFFF">
+<input name="text1" type="text" id="text1" value="%text1%" size="100%" /></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF">タイトル<br /></td>
+<td bgcolor="#FFFFFF">
+<textarea name="title" cols="100%" rows="3" id="title">%title%</textarea></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF">試合情報</td>
+<td bgcolor="#FFFFFF"><table border="0" cellpadding="4" cellspacing="1" class="text-12" bgcolor="#666666">
+<tr>
+<td align="center" nowrap="nowrap" bgcolor="#999999">チーム名</td>
+<td align="center" nowrap="nowrap" bgcolor="#999999">スコア</td>
+<td align="center" nowrap="nowrap" bgcolor="#999999">チーム名</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF"><input name="resultstr" type="text" id="resultstr" value="%resultstr%" size="20" /></td>
+<td align="center" bgcolor="#FFFFFF"><input name="result0" type="text" id="result0" value="%result0%" size="5" /> -
+<input name="result1" type="text" id="result1" value="%result1%" size="5" /></td>
+<td align="center" bgcolor="#FFFFFF"><input name="resultstr2" type="text" id="resultstr2" value="%resultstr2%" size="20" /></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF">本文<br /></td>
+<td bgcolor="#FFFFFF">
+<textarea name="body" cols="100%" rows="15" id="body">%body%</textarea></td>
+</tr>
+<tr class="text-12">
+<td bgcolor="#DEFFE8">メイン画像</td>
+<td bgcolor="#DEFFE8">%imgsrc0%%filename0%
+<input type="file" name="file0" id="file0" />
+%filedelete0%<br /></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF">キャプション<br /></td>
+<td bgcolor="#FFFFFF"><textarea name="caption0" cols="100%" rows="3" id="caption0">
+%caption0%</textarea></td>
+</tr>
+
+
+
+
+<tr>
+<td colspan="2" align="center" bgcolor="#FFFFFF"><br />
+<input type="submit" name="button" id="button" value="登録"  style="width:100px"/ ></td>
+</tr>
+</table>
+</form>

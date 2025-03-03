@@ -1,0 +1,35 @@
+<script>
+function decowindow(sourceobj){
+window.open("decowindow.html?sourceobj="+sourceobj,"decowindow","width=880,height=520,directories=no,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,top=0,left=10");
+}	//func
+</script>
+<style type="text/css">
+<!--
+.style2 {color: red;
+	font-size: 10px;
+}
+-->
+</style>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function kakunin() {
+if(window.confirm("この内容で登録します。\nよろしければ「OK」を押して下さい。\n修正する場合には「キャンセル」を押して下さい。")){
+return true;
+}
+return false;
+}
+// -->
+</SCRIPT>
+<form action="webpal.cgi" method="post" enctype="multipart/form-data" name="form1" id="form1" onsubmit="return kakunin()">
+<input name="code" type="hidden" id="code" value="%codevalue%" />
+<input name="contents" type="hidden" id="contents" value="%contents%" />
+<input name="tyear" type="hidden" id="tyear" value="%tyear%" />
+<strong><font color="red">%tyear%年</font></strong>の祝日を設定してください。
+<table width="300" border="0" cellpadding="4" cellspacing="1" bgcolor="#666666" class="text-12" >
+%holidaylist%
+<tr>
+<td colspan="2" align="center" bgcolor="#FFFFFF"><input type="submit" name="button" id="button" value="登録" style="width:100px"  /></td>
+</tr>
+</table>
+<br />
+</form>

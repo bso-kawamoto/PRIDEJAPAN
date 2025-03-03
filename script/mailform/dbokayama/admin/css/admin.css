@@ -1,0 +1,564 @@
+/* --------------------------------------------------------------------
+// Copyright 2012 XSERVER corporation
+// xserver mailform admin.css
+// --------------------------------------------------------------------
+
+
+//--------------------------------------------------------------------
+// フォームの基本項目
+//--------------------------------------------------------------------*/
+
+* {
+	font-size : 100% ;
+	margin : 0 ;
+	padding : 0 ;
+}
+
+body {
+font-family:"ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";
+text-align : center ;
+font-size : 75% ;
+}
+
+.assist {
+	font-size : 90% ;
+}
+
+#contents_wrapper {
+	width : 720px ;
+	margin : 0 auto 30px ;
+	padding : 0 15px 0 ;
+	border-left : 1px solid #b3b3b3 ;
+	border-right : 1px solid #b3b3b3 ;
+	border-bottom : 1px solid #b3b3b3 ;
+}
+
+#header {
+	height : 70px ;
+	position : relative ;
+	border-bottom : 1px solid #b3b3b3 ;
+	margin-bottom : 12px ;
+}
+
+#header h1 {
+	width : 158px ;
+	height : 38px ;
+	position : absolute ;
+	top : 15px ;
+	left : 0 ;
+	text-indent : -9999px ;
+	overflow : hidden ;
+	background : url(../images/header_logo.png) left top no-repeat ;
+}
+
+#header h2 {
+	font-size : 140% ;
+	position : absolute ; 
+	left : 170px ;
+	top : 30px ;
+}
+
+#header_navi {
+	position : absolute ;
+	right : 10px ;
+	top : 0 ;
+	border-right : 1px solid #b3b3b3 ;
+	height : 25px ;
+}
+
+#header_navi li {
+	width : 80px ;
+	height : 25px ;
+	float : left ;
+	list-style : none ;
+} 
+
+#header_navi li a {
+	display : block ;
+	height : 25px ;
+	line-height : 25px ;
+	margin : 0 ;
+	color : #444 ;
+	text-decoration : none ;
+	line-height : 25px ;
+	border-bottom : 1px solid #b3b3b3 ;
+	border-left : 1px solid #b3b3b3 ;
+}
+
+#header_navi li a:hover {
+	background-color : #ffd6ba ;
+	color : #ff6600 ;
+}
+
+#header_navi li#view_form_button {
+	width : 150px ;
+	border-right : 1px solid #b3b3b3 ;
+	margin-right : 8px ;
+}
+
+#header_navi li#view_form_button a {
+	background-color : #666 ;
+	color : #fff ;
+	padding-left : 20px ;
+	background-image : url(../images/view_form_icon.gif) ;
+	background-position : 6px center ;
+	background-repeat : no-repeat ;
+}
+
+#header_navi li#view_form_button a:hover {
+	background-color : #888 ;
+}
+
+
+
+/* ------------------------------------------------ */
+
+.setting_section {
+	margin-bottom : 25px ;
+}
+
+#contents p {
+	margin-bottom : 1em ;
+	text-align : left ;
+}
+
+#contents h3 {
+	color : #ff6600 ;
+	padding : 5px 10px 5px 6px ;
+	border-left : 10px solid #f60 ;
+	border-bottom : 1px solid #f60 ; 
+	text-align : left ;
+	font-size : 120% ;
+	margin-bottom : 10px ;
+}
+
+#contents .inner {
+	padding : 0 15px ;
+}
+
+#contents h4 {
+	border-top : 3px solid #f60 ;
+	background : #ffd9bb ;
+	padding : 5px 10px ;
+	font-size : 110% ;
+	margin-bottom : 8px ;
+}
+
+
+/* 汎用スタイル */
+
+.mr5 {
+	margin-right : 5px ;
+}
+
+.mr10 {
+	margin-right : 10px ;
+}
+
+
+
+/* 表に関するスタイル */
+
+#contents table {
+	width : 100% ;
+	border-collapse : collapse ;
+	border-left : 1px solid #b3b3b3 ;
+	border-top : 1px solid #b3b3b3 ;
+	border-right : none ; 
+	border-bottom : none ;
+}
+
+#contents table th {
+	border-right : 1px solid #b3b3b3 ;
+	border-bottom : 1px solid #b3b3b3 ;
+	border-top : none ; 
+	border-left : none ;
+	white-space : nowrap ;
+	background : #444 ;
+	color : #fff ; 
+	padding : 3px 5px ;
+}
+
+#contents table th.sub_th {
+	background : #dedede ;
+	color : #333 ;
+}
+
+#contents table td {
+	border-right : 1px solid #b3b3b3 ;
+	border-bottom : 1px solid #b3b3b3 ;
+	border-top : none ; 
+	border-left : none ;
+	padding : 3px 5px ;
+	text-align : left ;
+}
+
+#contents .conf_table td {
+	text-align : center ;
+}
+
+.space_box {
+	clear : both ;
+	padding : 8px ;
+}
+
+.button_box {
+	clear : both ;
+	padding : 8px ;
+	text-align : center ;
+}
+
+#contents input {
+	padding : 2px 3px ;
+}
+
+
+#footer {
+	clear : both ;
+	padding : 10px ;
+	border-top : 1px solid #b3b3b3 ;
+}
+
+#footer address {
+	display : inline ;
+	font-style : normal ;
+	padding-right : 15px ;
+}
+
+#set_htmltag {
+	clear : both ;
+	padding : 10px ;
+}
+
+/* ---------------------------------- */
+
+#left_container{
+	width : 480px ;
+	float : left ;
+}
+
+#left_container table{
+	width : 480px ;
+}
+
+
+#right_container{
+	width : 200px ;
+	float : right ;
+}
+
+#right_container table{
+	width: 200px ;
+}
+
+#logout_container{
+	padding : 24px 6px 2px ;
+	float : right;
+}
+
+#view_button{
+	text-align : right ;
+}
+
+.attention_txt {
+	font-size : 80% ;
+}
+
+.red_txt {
+	color: #FF3333;
+}
+
+.left_txt {
+	text-align : left;
+}
+
+/* ---------------------------------- */
+
+#contents .display_item_wrapper {
+	padding : 6px 6px 3px ;
+	background : #ffffff ;
+	border : 1px solid #b3b3b3 ;
+}
+
+#contents .display_item {
+	margin-bottom : 5px ;
+	text-align : left ;
+	position : relative ;
+	background : #fff ;
+}
+
+#contents .display_item h5 {
+	background : #cdcdcd ;
+	border : 1px solid #b3b3b3 ;
+	height : 29px ;
+	line-height : 29px ;
+	font-size : 110% ;
+	padding : 0 8px ;
+}
+
+#contents .display_item h5 span.assist {
+	font-size : 85% !important;
+	padding-left : 10px ;
+	line-height : 29px ;
+}
+
+#contents .display_item .inner {
+	background : #eee ;
+	padding : 10px ;
+	border-left : 1px solid #b3b3b3 ;
+	border-right : 1px solid #b3b3b3 ;
+	border-bottom : 1px solid #b3b3b3 ;
+}
+
+
+#contents .display_item .item_option {
+	margin-top : 8px ;
+	padding : 6px ;
+	border : 1px solid #b3b3b3 ;
+	background : #fff;
+}
+
+#contents .display_item .updown_button {
+	position : absolute ;
+	top : 3px ;
+	right : 65px ;
+}
+
+#contents .display_item .updown_button input {
+	height : 25px ;
+}
+
+#contents .display_item .no_display_button {
+	position : absolute ;
+	top : 3px ;
+	right : 10px ;
+}
+#contents .display_item .no_display_button input {
+	height : 25px ;
+}
+
+
+
+/* ---------------------------------- */
+
+#setting_navi {
+	height : 37px ;
+	background : url(../images/setting_navi_bottom_back.png) left bottom repeat-x ;
+	margin-bottom : 15px ;
+	padding-left : 12px ;
+}
+
+#setting_navi li {
+	width : 140px ;
+	height : 36px ;
+	text-align : center ;
+	float : left ;
+	border-top : 1px solid #b3b3b3 ;
+	border-left : 1px solid #b3b3b3 ;
+	list-style : none ;
+}
+
+#setting_navi li.list_end {
+	border-right : 1px solid #b3b3b3 ;
+}
+
+#setting_navi li a {
+	display : block ;
+	height : 31px ;
+	width : 140px ;
+	line-height : 31px ;
+	border-top : 4px solid #666 ;
+	border-bottom : 1px solid #b3b3b3 ;
+	background-color : #ccc ;
+	text-decoration : none ;
+	font-weight : bold ;
+	color : #444 ;
+}
+
+#setting_navi li a:hover {
+	background-color : #ffd6ba ;
+	color : #ff6600 ;
+	height : 31px ;
+	line-height : 31px ;
+	border-top: 4px solid #ff6600 ;
+}
+
+#form_setting #setting_navi_form a, 
+#design_setting #setting_navi_design a,
+#option_setting #setting_navi_option a,
+#sethtml_setting #setting_navi_sethtml a {
+	background-color : #fff ;
+	color : #ff6600 ;
+	height : 31px ;
+	line-height : 31px ;
+	border-top : 4px solid #ff6600 ;
+	border-bottom : 1px solid #fff ;
+}
+
+
+/* ---------------------------------- */
+
+.color_sample li {
+	width : 12px ;
+	height : 12px ;
+	float : left ;
+	margin-right : 4px ;
+	border : 1px solid #ccc ;
+	list-style : none ;
+}
+
+.color_sample li a {
+	text-indent : -9999px ;
+	overflow : hidden ;
+	display : block ;
+	width : 12px ;
+	height : 12px ;
+}
+
+
+/* ---------------------------------- */
+
+#design_table .explain_item {
+	margin-bottom : 4px ;
+}
+
+#design_table .setting_item {
+	margin-bottom : 4px ;
+	float : left ;
+	width : 200px ;
+	height : 30px ;
+	line-height : 30px ;
+}
+
+#design_table .current_color {
+	height : 30px ;
+	width : 200px ;
+	float : left ;
+	line-height : 30px ;
+	padding-left : 12px ;
+	background : url(../images/arrow_marker.png) left center no-repeat ;
+}
+
+#design_table .select_item {
+	clear : both ;
+}
+
+#design_table .select_item dt {
+	width : 45px ;
+	float : left ;
+}
+
+#design_table .select_item dd {
+	width : 540px ;
+	float : left ;
+}
+
+
+.current_color .current_setting {
+	width : 30px ;
+	height : 18px ;
+	float : left ;
+	margin : 6px 4px 6px 0 ;
+	border : 1px solid #ccc ;
+	list-style : none ;
+	text-indent : -9999px ;
+}
+
+
+#design_table td {
+	padding : 0 ;
+}
+
+#design_table .color_setting_wrapper {
+	position : relative ;
+	padding : 4px 5px ;;
+}
+
+.current_color .set_default {
+	width : 100px ;
+	height : 20px ;
+	line-height : 20px ;
+	position : absolute ;
+	right : 0px ;
+	top : 0 ;
+	padding-left : 12px ;
+	background : url(../images/arrow_marker.png) left center no-repeat ;
+}
+
+#sub_navi {
+	height : 28px ;
+	background:url(../images/setting_navi_bottom_back.png) left bottom repeat-x ;
+	margin-bottom : 12px ;
+	clear : both ;
+	padding-left : 8px ;
+}
+
+#sub_navi li {
+	height : 26px ;
+	float : left ;
+	margin-right : 8px ;
+	border : 1px solid #b3b3b3 ;
+	margin-left : 0px ;
+	list-style-type : none ;
+	background : #b3b3b3 ;
+}
+
+#sub_navi li a {
+	display : block ;
+	height : 26px ;
+	line-height : 26px ;
+	padding : 0 8px ;
+	text-decoration : none ;
+	color : #333 ;
+}
+
+#sub_navi li a:hover {
+	background : #fff ;
+}
+
+.current_sub_navi {
+	background : #fff ;
+	border-bottom : 1px solid #fff ;
+}
+
+.txt_center {
+	text-align : center ;
+}
+
+.input_textarea {
+	width : 546px ;
+	border : 1px solid #ccc ;
+	float : left ;
+	height : 420px ;
+	padding : 5px ;
+	margin-bottom : 12px ;
+}
+
+.input_textarea textarea {
+	width : 536px ;
+	height : 410px ;
+}
+
+.side_menu {
+	float : right ;
+	width : 121px ;
+	border-top : 1px solid #ccc ;
+	border-right : 1px solid #ccc ;
+	border-bottom : 1px solid #ccc ;
+	height : 420px ;
+	padding : 5px ;
+	margin-bottom : 12px ;
+	background : #eee ;
+}
+
+.side_menu .operation_button {
+	margin-bottom : 30px ;
+}
+
+.side_menu input {
+	width : 119px ;
+	margin-bottom : 5px ;
+	font-size : 90% ;
+}
+
+

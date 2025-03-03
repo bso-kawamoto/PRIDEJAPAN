@@ -1,0 +1,210 @@
+<script>
+function decowindow(sourceobj){
+window.open("decowindow.html?sourceobj="+sourceobj,"decowindow","width=880,height=520,directories=no,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,top=0,left=10");
+}	//func
+</script>
+<script>
+<!--
+function kakunin(){
+
+if (document.form1.title.value == '') {
+alert('大会名が入力されていません。');
+return(false);
+}
+
+
+
+
+if( !document.form1.filename0 ){
+if(document.form1.file0.value == "" ){
+alert('大会イメージ画像が選択されていません。');
+return(false);
+}	
+
+if(document.form1.file1.value == ""){
+alert('TOP大会バナー画像が選択されていません。');
+return(false);
+}	
+
+}else{
+
+if(document.form1.file0.value == "" && document.form1.filename0.value == ""){
+alert('大会イメージ画像が選択されていません。');
+return(false);
+}	
+
+if(document.form1.file1.value == "" && document.form1.filename1.value == ""){
+alert('TOP大会バナー画像が選択されていません。');
+return(false);
+}	
+
+}
+
+
+var w1 = document.getElementById('category1').checked;
+var w2 = document.getElementById('category2').checked;
+var w3 = document.getElementById('category3').checked;
+
+if( w1 == false && w2 == false && w3 == false){
+alert('枠の情報が記入されていません。');
+return(false);
+}
+
+if(w1 == true ){
+if(document.getElementById('price1').value == ""){alert('第１枠の費用が入力されておりません。');return(false);}
+}
+
+if(w2 == true ){
+if(document.getElementById('price2').value == ""){alert('第２枠の費用が入力されておりません。');return(false);}
+}
+
+if(w3 == true ){
+if(document.getElementById('price3').value == ""){alert('第３枠の費用が入力されておりません。');return(false);}
+}
+
+
+
+if(window.confirm("この内容で登録します。\nよろしければ「OK」を押して下さい。\n修正する場合には「キャンセル」を押して下さい。")){
+return true;
+}
+
+return false;
+}
+
+function  wakucheck(num){
+var w1 = document.getElementById('category1').checked;
+var w2 = document.getElementById('category2').checked;
+var w3 = document.getElementById('category3').checked;
+if(w1 == true || w2 == true ){
+	document.getElementById('category3').checked = false;
+}
+if(w1 == true && w2 == true ){
+	document.getElementById('category1').disabled = true;
+	document.getElementById('category2').disabled = true;
+	document.getElementById('category3').checked = true;
+}
+if(w3 == true ){
+	document.getElementById('category1').checked = true;
+	document.getElementById('category2').checked = true;
+	document.getElementById('category1').disabled = true;
+	document.getElementById('category2').disabled = true;
+}
+if(num == 3 && w3 == false){
+	document.getElementById('category1').checked = false;
+	document.getElementById('category2').checked = false;
+	document.getElementById('category3').checked = false;
+	document.getElementById('category1').disabled = false;
+	document.getElementById('category2').disabled = false;
+}
+}	//func
+
+-->
+</script>
+<style type="text/css">
+<!--
+.style1 {
+	font-size: small;
+	color: red;
+	
+}
+
+-->
+</style>
+<form action="webpal.cgi" method="post" enctype="multipart/form-data" name="form1" id="form1" onSubmit="return kakunin()" >
+<input name="code" type="hidden" id="code" value="%code%" />
+<input name="serial" type="hidden" id="serial" value="%serial%" />
+<input name="contents" type="hidden" id="contents" value="%contents%" />
+<input name="taikaicode" type="hidden" id="taikaicode" value="%taikaicode%" />
+
+<table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#666666" class="text-12">
+<tr>
+<td align="center" bgcolor="#FFFFFF" class="tdpad2">公開の有無</td>
+<td bgcolor="#FFFFFF" class="tdpad2">
+<input type="radio" name="koukaiflag" id="radio" value="0" %koukaiflag0% />
+公開する
+<input type="radio" name="koukaiflag" id="radio" value="1" %koukaiflag1% />
+公開しない</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF" class="tdpad2">バナーカテゴリ</td>
+<td bgcolor="#FFFFFF" class="tdpad2"> %bannercategory%
+</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF" class="tdpad2">登録年月日</td>
+<td bgcolor="#FFFFFF" class="tdpad2">
+%nichiji% 
+</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF" class="tdpad2">表示順<br /></td>
+<td bgcolor="#FFFFFF" class="tdpad2">
+<input name="sortnum" type="text" id="sortnum" value="%sortnum%" size="6" />
+※登録年月日が同じ場合、表示順が大きい方が先頭に表示されます。</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF" class="tdpad2">大会名<br /></td>
+<td bgcolor="#FFFFFF" class="tdpad2">
+<input name="title" type="text" id="title" value="%title%" size="100%" /></td>
+</tr>
+<tr class="text-12">
+<td bgcolor="#DEFFE8" class="tdpad2">大会イメージ画像</td>
+<td valign="top" bgcolor="#DEFFE8" class="tdpad2">%imgsrc0%%filename0%
+<input type="file" name="file0" id="file0" />
+%filedelete0%<br />
+<span class="style1">※サイズ：幅900px、縦337px</span></td>
+</tr>
+<tr>
+<td bgcolor="#DEFFE8" class="tdpad2">TOP大会バナー画像</td>
+<td valign="top" bgcolor="#DEFFE8" class="tdpad2">%imgsrc1%%filename1%
+<input type="file" name="file1" id="file1" />
+%filedelete1%<br />
+<span class="style1">※サイズ：幅440px、縦114px</span></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF" class="tdpad2">第１枠（リーグ用）<br />
+</td>
+<td bgcolor="#FFFFFF" class="tdpad2">
+<input name="category" type="checkbox" id="category1" value="1" onClick="wakucheck(1)" %category1flag% />
+利用する
+　
+<input name="price1" type="text" id="price1" value="%price1%" size="10" />
+　円
+ 　
+<input name="maninonrei1" type="checkbox" id="maninonrei1" value="1" %maninonrei1flag% />
+募集停止
+</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF" class="tdpad2">第２枠（トーナメント用）<br />
+</td>
+<td bgcolor="#FFFFFF" class="tdpad2">
+<input name="category" type="checkbox" id="category2" value="2" onClick="wakucheck(2)" %category2flag% />
+利用する
+　
+<input name="price2" type="text" id="price2" value="%price2%" size="10" />
+　円 　
+<input name="maninonrei2" type="checkbox" id="maninonrei2" value="1" %maninonrei2flag% />
+募集停止</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF" class="tdpad2">両方<br />
+</td>
+<td bgcolor="#FFFFFF" class="tdpad2">
+<input name="category" type="checkbox" id="category3" value="3" onClick="wakucheck(3)" %category3flag% />
+利用する 
+　
+<input name="price3" type="text" id="price3" value="%price3%" size="10" />
+　円</td>
+</tr>
+
+
+
+
+<tr>
+<td colspan="2" align="center" bgcolor="#FFFFFF"><br />
+<input type="submit" name="button" id="button" value="登録"  style="width:100px"/ ></td>
+</tr>
+</table>
+</form>
+

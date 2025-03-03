@@ -1,0 +1,95 @@
+<script>
+function decowindow(sourceobj){
+window.open("decowindow.html?sourceobj="+sourceobj,"decowindow","width=880,height=520,directories=no,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,top=0,left=10");
+}	//func
+</script>
+<script>
+<!--
+function kakunin(){
+
+if (document.form1.title.value == '') {
+alert('タイトルが入力されていません。');
+return(false);
+}
+if (document.form1.body.value == '') {
+alert('本文が入力されていません。');
+return(false);
+}
+if(window.confirm("この内容で登録します。\nよろしければ「OK」を押して下さい。\n修正する場合には「キャンセル」を押して下さい。")){
+return true;
+}
+
+return false;
+}
+-->
+</script>
+<style type="text/css">
+<!--
+.style1 {
+	font-size: small;
+	color: red;
+}
+-->
+</style>
+<form action="webpal.cgi" method="post" enctype="multipart/form-data" name="form1" id="form1" onSubmit="return kakunin()" >
+<input name="code" type="hidden" id="code" value="%code%" />
+<input name="serial" type="hidden" id="serial" value="%serial%" />
+<input name="contents" type="hidden" id="contents" value="%contents%" />
+<input name="taikaicode" type="hidden" id="taikaicode" value="%taikaicode%" />
+
+<table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#666666" class="text-12">
+<tr>
+<td align="center" bgcolor="#FFFFFF">公開の有無</td>
+<td bgcolor="#FFFFFF"><p>
+<input type="radio" name="koukaiflag" id="radio" value="0" %koukaiflag0% />
+公開する
+<input type="radio" name="koukaiflag" id="radio" value="1" %koukaiflag1% />
+公開しない</p></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF">表示順<br /></td>
+<td bgcolor="#FFFFFF">
+<input name="sortnum" type="text" id="sortnum" value="%sortnum%" size="6" />
+※表示順が大きい方が先頭に表示されます。</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF">タイトル<br /></td>
+<td bgcolor="#FFFFFF">
+<textarea name="title" cols="100%" rows="2" id="title">%title%</textarea></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF">本文<br /></td>
+<td bgcolor="#FFFFFF">
+<textarea name="body" cols="100%" rows="10" id="body">%body%</textarea></td>
+</tr>
+<tr class="text-12">
+<td align="center" bgcolor="#DEFFE8">画像１</td>
+<td bgcolor="#DEFFE8">%imgsrc0%%filename0%
+<input type="file" name="file0" id="file0" />
+%filedelete0%<br />
+<span class="style1">※サイズ：幅790px、縦は規制なし</span></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#DEFFE8">画像２</td>
+<td bgcolor="#DEFFE8">%imgsrc1%%filename1%
+<input type="file" name="file1" id="file1" />
+%filedelete1%<br />
+<span class="style1">※サイズ：幅790px、縦は規制なし</span></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#DEFFE8">画像３</td>
+<td bgcolor="#DEFFE8">%imgsrc2%%filename2%
+<input type="file" name="file2" id="file2" />
+%filedelete2%<br />
+<span class="style1">※サイズ：幅790px、縦は規制なし</span></td>
+</tr>
+
+
+
+
+<tr>
+<td colspan="2" align="center" bgcolor="#FFFFFF"><br />
+<input type="submit" name="button" id="button" value="登録"  style="width:100px"/ ></td>
+</tr>
+</table>
+</form>

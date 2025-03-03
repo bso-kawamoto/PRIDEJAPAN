@@ -1,0 +1,37 @@
+<script>
+function decowindow(sourceobj){
+window.open("decowindow.html?sourceobj="+sourceobj,"decowindow","width=880,height=520,directories=no,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,top=0,left=10");
+}	//func
+</script>
+<script>
+<!--
+function kakunin(){
+
+if(window.confirm("この内容で登録します。\nよろしければ「OK」を押して下さい。\n修正する場合には「キャンセル」を押して下さい。")){
+return true;
+}
+
+return false;
+}
+-->
+</script>
+<style type="text/css">
+<!--
+.style1 {
+	font-size: small;
+	color: red;
+}
+-->
+</style>
+<form action="webpal.cgi" method="post" enctype="multipart/form-data" name="form1" id="form1" onSubmit="return kakunin()" >
+<input name="code" type="hidden" id="code" value="%code%" />
+<input name="serial" type="hidden" id="serial" value="%serial%" />
+<input name="contents" type="hidden" id="contents" value="%contents%" />
+<input name="taikaicode" type="hidden" id="taikaicode" value="%taikaicode%" />
+<input name="category" type="hidden" id="category" value="%category%" />
+<input name="area" type="hidden" id="area" value="%area%" />
+<input name="kumi" type="hidden" id="kumi" value="%kumi%" />
+<input name="koukaiflag" type="hidden" id="koukaiflag" value="0" />
+<input name="sortnum" type="hidden" id="sortnum" value="%sortnum%" />
+%data%
+</form>

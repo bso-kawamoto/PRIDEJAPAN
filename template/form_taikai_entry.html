@@ -1,0 +1,146 @@
+<script>
+function decowindow(sourceobj){
+window.open("decowindow.html?sourceobj="+sourceobj,"decowindow","width=880,height=520,directories=no,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,top=0,left=10");
+}	//func
+</script>
+<script>
+<!--
+function kakunin(){
+
+if (document.form1.title.value == '') {
+alert('タイトルが入力されていません。');
+return(false);
+}
+if (document.form1.text1.value == '') {
+alert('予選の節目が入力されていません。');
+return(false);
+}
+if (document.form1.body.value == '') {
+alert('本文が入力されていません。');
+return(false);
+}
+if(window.confirm("この内容で登録します。\nよろしければ「OK」を押して下さい。\n修正する場合には「キャンセル」を押して下さい。")){
+return true;
+}
+
+return false;
+}
+-->
+</script>
+<style type="text/css">
+<!--
+.style1 {
+	font-size: small;
+	color: red;
+}
+-->
+</style>
+<form action="webpal.cgi" method="post" enctype="multipart/form-data" name="form1" id="form1" onSubmit="return kakunin()" >
+<input name="code" type="hidden" id="code" value="%code%" />
+<input name="serial" type="hidden" id="serial" value="%serial%" />
+<input name="contents" type="hidden" id="contents" value="%contents%" />
+<input name="serial_uid" type="hidden" id="serial_uid" value="%serial_uid%" />
+<input name="taikaicode" type="hidden" id="taikaicode" value="%taikaicode%" />
+<input name="shimei1" type="hidden" id="shimei1" value="%shimei1%" />
+<input name="mailaddress1" type="hidden" id="mailaddress1" value="%mailaddress1%" />
+<input name="mailaddress1" type="hidden" id="mailaddress1" value="%mailaddress1%" />
+<input name="tel1" type="hidden" id="tel1" value="%tel1%" />
+
+
+<table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#666666" class="text-12">
+<tr>
+<td width="23%" align="center" nowrap="nowrap" bgcolor="#FFFFFF">参加大会<br />
+</td>
+<td width="77%" bgcolor="#FFFFFF">
+<p> %taikai% <br />
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" nowrap="nowrap" bgcolor="#FFFFFF">大会参加希望都道府県<br />
+</td>
+<td bgcolor="#FFFFFF">
+<p> %team_pref% <br />
+※居住等は問いません。参加希望の都道府県でご参加いただけます。
+</td>
+</tr>
+<tr>
+<td align="center" nowrap="nowrap" bgcolor="#FFFFFF">活動拠点<br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="team_cities" type="text" id="team_cities" value="%team_cities%" size="20" />
+主に利用するグラウンドのある市町村名
+</td>
+</tr>
+<tr>
+<td align="center" nowrap="nowrap" bgcolor="#FFFFFF">第一担当者名<br />
+</td>
+<td bgcolor="#FFFFFF">
+<p> %shimei1% <br />
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" nowrap="nowrap" bgcolor="#FFFFFF">チーム代表者PCメールアドレス<br />
+</td>
+<td bgcolor="#FFFFFF">
+<p> %mailaddress1% <br />
+※迷惑メールに関する説明
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" nowrap="nowrap" bgcolor="#FFFFFF">代表者携帯メールアドレス<br />
+</td>
+<td bgcolor="#FFFFFF">
+<p> %mailaddress1% <br />
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" nowrap="nowrap" bgcolor="#FFFFFF">代表者携帯番号<br />
+</td>
+<td bgcolor="#FFFFFF">
+<p> %tel1% <br />
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" nowrap="nowrap" bgcolor="#FFFFFF">第二担当者名<br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="shimei2" type="text" id="shimei2" value="%shimei2%" size="100%" />
+</td>
+</tr>
+<tr>
+<td align="center" nowrap="nowrap" bgcolor="#FFFFFF">第二担当者携帯番号<br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="tel2" type="text" id="tel2" value="%tel2%" size="100%" />
+</td>
+</tr>
+<td align="center" nowrap="nowrap" bgcolor="#FFFFFF">活動実績<br />（できるだけ具体的に<br />ご記入ください）
+</td>
+<td bgcolor="#FFFFFF">
+<textarea name="past_perform" cols="100%" rows="5" id="past_perform">%past_perform%</textarea>
+</td>
+</tr>
+<tr>
+<td align="center" nowrap="nowrap" bgcolor="#FFFFFF">大会参加希望日<br />
+</td>
+<td bgcolor="#FFFFFF">
+<p> %katsudou_week% <br />
+</p>
+</td>
+</tr>
+
+
+
+
+
+<tr>
+<td colspan="2" align="center" bgcolor="#FFFFFF"><br />
+<input type="submit" name="button" id="button" value="登録"  style="width:100px"/ ></td>
+</tr>
+</table>
+</form>

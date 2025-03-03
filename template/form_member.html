@@ -1,0 +1,289 @@
+<script>
+function decowindow(sourceobj){
+window.open("decowindow.html?sourceobj="+sourceobj,"decowindow","width=880,height=520,directories=no,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,top=0,left=10");
+}	//func
+</script>
+<script>
+<!--
+function kakunin(){
+
+if (document.form1.teamname.value == '') {
+alert('チーム正式名称が入力されていません。');
+return(false);
+}
+if (document.form1.team_kana.value == '') {
+alert('チーム正式名称（フリガナ）が入力されていません。');
+return(false);
+}
+if (document.form1.team_abbr.value == '') {
+alert('チーム略称が入力されていません。');
+return(false);
+}
+if (document.form1.team_year.value == '') {
+alert('チーム結成年が入力されていません。');
+return(false);
+}
+if (document.form1.shimei1.value == '') {
+alert('代表者氏名が入力されていません。');
+return(false);
+}
+if (document.form1.shimei_kana1.value == '') {
+alert('代表者氏名（フリガナ）が入力されていません。');
+return(false);
+}
+if (document.form1.mailaddress1.value == '') {
+alert('代表者メールアドレスが入力されていません。');
+return(false);
+}
+if (document.form1.tel1.value == '') {
+alert('代表者電話番号が入力されていません。');
+return(false);
+}
+if (document.form1.prefectural1.value == '') {
+alert('代表者住所（市区町村まで）が入力されていません。');
+return(false);
+}
+if (document.form1.shimei2.value == '') {
+alert('第2担当者氏名が入力されていません。');
+return(false);
+}
+if (document.form1.shimei_kvna2.value == '') {
+alert('第2担当者氏名（フリガナ）が入力されていません。');
+return(false);
+}
+if (document.form1.tel2.value == '') {
+alert('第2担当者電話番号が入力されていません。');
+return(false);
+}
+if (document.form1.mailadr.value == '') {
+alert('チームメールアドレスが入力されていません。');
+return(false);
+}
+if (document.form1.pwd.value == '') {
+alert('パスワードが入力されていません。');
+return(false);
+}
+if (document.form1.pwd2.value == '') {
+alert('パスワード（確認用）が入力されていません。');
+return(false);
+}
+if(window.confirm("この内容で登録します。\nよろしければ「OK」を押して下さい。\n修正する場合には「キャンセル」を押して下さい。")){
+return true;
+}
+
+return false;
+}
+-->
+</script>
+<style type="text/css">
+<!--
+.style1 {
+	font-size: small;
+	color: red;
+}
+-->
+</style>
+<form action="webpal.cgi" method="post" enctype="multipart/form-data" name="form1" id="form1" onSubmit="return kakunin()" >
+<input name="code" type="hidden" id="code" value="%code%" />
+<input name="serial" type="hidden" id="serial" value="%serial%" />
+<input name="contents" type="hidden" id="contents" value="%contents%" />
+<input name="taikaicode" type="hidden" id="taikaicode" value="%taikaicode%" />
+
+<table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#666666" class="text-12">
+
+<tr>
+<td width="21%" align="right" bgcolor="#FFFFFF">チーム正式名称<span class="style1">※</span><br />
+</td>
+<td width="79%" bgcolor="#FFFFFF">
+<input name="teamname" type="text" id="teamname" value="%teamname%" size="100%" />
+</td>
+</tr>
+
+<tr>
+<td align="right" bgcolor="#FFFFFF">チーム正式名称<span class="style1">※</span><br />（フリガナ）　
+</td>
+<td bgcolor="#FFFFFF">
+<input name="team_kana" type="text" id="team_kana" value="%team_kana%" size="100%" />
+</td>
+</tr>
+
+<tr>
+<td align="right" bgcolor="#FFFFFF">チーム略称<span class="style1">※</span><br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="team_abbr" type="text" id="team_abbr" value="%team_abbr%" size="100%" />
+</td>
+</tr>
+
+<tr>
+<td align="right" bgcolor="#FFFFFF">チーム結成年<span class="style1">※</span><br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="team_year" type="text" id="team_year" value="%team_year%" size="4" /> 年
+</td>
+</tr>
+
+<tr>
+<td align="right" bgcolor="#FFFFFF">主な活動曜日　<br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="katsudou_week" type="text" id="katsudou_week" value="%katsudou_week%" size="100%" />
+</td>
+</tr>
+
+<tr>
+<td align="right" bgcolor="#FFFFFF">平均年齢　<br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="average_age" type="text" id="average_age" value="%average_age%" size="4" /> 歳
+</td>
+</tr>
+
+<tr>
+<td align="right" bgcolor="#FFFFFF">主な活動場所　<br />（市区町村まで）　
+</td>
+<td bgcolor="#FFFFFF">%team_pref%<br />
+<input name="team_cities" type="text" id="team_cities" value="%team_cities%" size="100%" />
+</td>
+</tr>
+
+<td align="right" bgcolor="#FFFFFF">過去実績　<br />
+</td>
+<td bgcolor="#FFFFFF">
+<textarea name="past_perform" cols="100%" rows="5" id="past_perform">%past_perform%</textarea>
+</td>
+</tr>
+
+
+<td align="right" bgcolor="#FFFFFF">チームPR　<br />
+</td>
+<td bgcolor="#FFFFFF">
+<textarea name="team_pr" cols="100%" rows="5" id="team_pr">%team_pr%</textarea>
+</td>
+</tr>
+
+<tr>
+<td align="right" bgcolor="#FFFFFF">代表者氏名<span class="style1">※</span><br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="shimei1" type="text" id="shimei1" value="%shimei1%" size="100%" />
+</td>
+</tr>
+
+<tr>
+<td align="right" bgcolor="#FFFFFF">代表者氏名<span class="style1">※</span><br />（フリガナ）　
+</td>
+<td bgcolor="#FFFFFF">
+<input name="shimei_kana1" type="text" id="shimei_kana1" value="%shimei_kana1%" size="100%" />
+</td>
+</tr>
+
+<tr>
+<td align="right" nowrap="nowrap" bgcolor="#FFFFFF">ログイン用メールアドレス<span class="style1">※</span><br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="mailadr1" type="text" id="mailadr1" value="%mailadr1%" size="20" />＠
+<input name="mailadr2" type="text" id="mailadr2" value="%mailadr2%" size="20" />
+</td>
+</tr>
+
+<tr>
+<td align="right" bgcolor="#FFFFFF">代表者メールアドレス<span class="style1">※</span><br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="mailaddress1" type="text" id="mailaddress1" value="%mailaddress1%" size="100%" /><br />
+　PC、携帯どちらのメールアドレスでも構いません。
+</td>
+</tr>
+
+<tr>
+<td align="right" bgcolor="#FFFFFF">代表者電話番号<span class="style1">※</span><br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="tel1" type="text" id="tel1" value="%tel1%" size="100%" />
+</td>
+</tr>
+
+<tr>
+<td align="right" bgcolor="#FFFFFF">代表者住所<span class="style1">※</span><br />（市区町村まで）　
+</td>
+<td bgcolor="#FFFFFF">%prefectural1%<br />
+<input name="cities1" type="text" id="cities1" value="%cities1%" size="100%" />
+</td>
+</tr>
+
+<tr>
+<td align="right" bgcolor="#FFFFFF">第2担当者氏名<span class="style1">※</span><br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="shimei2" type="text" id="shimei2" value="%shimei2%" size="100%" />
+</td>
+</tr>
+
+<tr>
+<td align="right" bgcolor="#FFFFFF">第2担当者氏名<span class="style1">※</span><br />（フリガナ）　
+</td>
+<td bgcolor="#FFFFFF">
+<input name="shimei_kana2" type="text" id="shimei_kvna2" value="%shimei_kana2%" size="100%" />
+</td>
+</tr>
+
+<tr>
+<td align="right" bgcolor="#FFFFFF">第2担当者電話番号<span class="style1">※</span><br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="tel2" type="text" id="tel2" value="%tel2%" size="100%" /><br />
+　代表者様にご連絡がつかない場合、こちらにご連絡を差し上げます。
+</td>
+</tr>
+
+<tr>
+<td align="right" bgcolor="#FFFFFF">チームメールアドレス<span class="style1">※</span><br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="mailaddress2" type="text" id="mailaddress2" value="%mailaddress2%" size="100%" /><br />
+　登録アドレスはPCに限ります。<br />　（代表者のメールアドレスがPCの方は、代表者アドレスと同じで構いません）
+</td>
+</tr>
+
+<tr>
+<td align="right" bgcolor="#FFFFFF">チームHPアドレス　<br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="team_hp" type="text" id="team_hp" value="%team_hp%" size="100%" />
+</td>
+</tr>
+
+<tr>
+<td align="right" bgcolor="#FFFFFF">パスワード<span class="style1">※</span><br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="pwd" type="text" id="pwd" value="%pwd%" size="20" />
+</td>
+</tr>
+
+<tr>
+<td align="right" bgcolor="#FFFFFF">パスワード（確認用）<span class="style1">※</span><br />
+</td>
+<td bgcolor="#FFFFFF">
+<input name="pwd2" type="text" id="pwd2" value="%pwd2%" size="20" />
+</td>
+</tr>
+
+<tr class="text-12">
+<td bgcolor="#DEFFE8">メイン画像<br />
+</td>
+<td bgcolor="#DEFFE8">%imgsrc0%%filename0%
+<input type="file" name="file0" id="file0" />
+%filedelete0%<br /></td>
+</tr>
+
+
+
+
+<tr>
+<td colspan="2" align="center" bgcolor="#FFFFFF"><br />
+<input type="submit" name="button" id="button" value="登録"  style="width:100px"/ ></td>
+</tr>
+</table>
+</form>

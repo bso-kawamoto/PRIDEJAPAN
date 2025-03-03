@@ -1,0 +1,177 @@
+<script>
+<!--
+function kakunin(){
+
+
+if(window.confirm("この内容で登録します。\nよろしければ「OK」を押して下さい。\n修正する場合には「キャンセル」を押して下さい。")){
+return true;
+}
+
+return false;
+}
+-->
+</script>
+<style type="text/css">
+<!--
+.style1 {
+	font-size: small;
+	color: red;
+}
+-->
+</style>
+<form action="webpal.cgi" method="post" enctype="multipart/form-data" name="form1" id="form1" onSubmit="return kakunin()" >
+<input name="code" type="hidden" id="code" value="%code%" />
+<input name="serial" type="hidden" id="serial" value="%serial%" />
+<input name="contents" type="hidden" id="contents" value="%contents%" />
+<table border="0" cellpadding="2" cellspacing="1" bgcolor="#666666" class="text-12">
+<tr>
+<td align="center" bgcolor="#FFFFFF">公開の有無</td>
+<td colspan="7" bgcolor="#FFFFFF"><p>
+<input type="radio" name="koukaiflag" id="radio" value="0" %koukaiflag0% />
+公開する
+<input type="radio" name="koukaiflag" id="radio" value="1" %koukaiflag1% />
+公開しない</p></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF">登録年月<br />
+</td>
+<td colspan="7" bgcolor="#FFFFFF">
+<p> %nichiji% <br />
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF">表示順<br />
+</td>
+<td colspan="7" bgcolor="#FFFFFF">
+<textarea name="sortnum" cols="5" rows="1" id="sortnum">%sortnum%</textarea>
+※登録年月が同じ場合、表示順が大きい方が先頭に表示されます。
+</td>
+</tr>
+<tr>
+<td align="center" bgcolor="#FFFFFF">医師名<br />
+</td>
+<td colspan="7" align="center" bgcolor="#FFFFFF"><p>
+月間スケジュール<br />
+</p></td>
+</tr>
+
+<tr>
+<td rowspan="5" align="center" bgcolor="#FFFFFF">
+<textarea name="doctor1" cols="8" rows="2" id="doctor1">%doctor1%</textarea>
+</td>
+<td bgcolor="#FFFFFF"><p>1<br />
+<textarea name="date1" cols="5" rows="1" id="date1">%date1%</textarea><br />
+<textarea name="date2" cols="5" rows="1" id="date2">%date2%</textarea></td>
+<td bgcolor="#FFFFFF"><p>2<br />
+<textarea name="date3" cols="5" rows="1" id="date3">%date3%</textarea><br />
+<textarea name="date4" cols="5" rows="1" id="date4">%date4%</textarea></td>
+<td bgcolor="#FFFFFF"><p>3<br />
+<textarea name="date5" cols="5" rows="1" id="date5">%date5%</textarea><br />
+<textarea name="date6" cols="5" rows="1" id="date6">%date6%</textarea></td>
+<td bgcolor="#FFFFFF"><p>4<br />
+<textarea name="date7" cols="5" rows="1" id="date7">%date7%</textarea><br />
+<textarea name="date8" cols="5" rows="1" id="date8">%date8%</textarea></td>
+<td bgcolor="#FFFFFF"><p>5<br />
+<textarea name="date9" cols="5" rows="1" id="date9">%date9%</textarea><br />
+<textarea name="date10" cols="5" rows="1" id="date10">%date10%</textarea></td>
+<td bgcolor="#FFFFFF"><p>6<br />
+<textarea name="date11" cols="5" rows="1" id="date11">%date11%</textarea><br />
+<textarea name="date12" cols="5" rows="1" id="date12">%date12%</textarea></td>
+<td bgcolor="#FFFFFF"><p>7<br />
+<textarea name="date13" cols="5" rows="1" id="date13">%date13%</textarea><br />
+<textarea name="date14" cols="5" rows="1" id="date14">%date14%</textarea></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF"><p>8<br />
+<textarea name="date15" cols="5" rows="1" id="date15">%date15%</textarea><br />
+<textarea name="date16" cols="5" rows="1" id="date16">%date16%</textarea></td>
+<td bgcolor="#FFFFFF"><p>9<br />
+<textarea name="date17" cols="5" rows="1" id="date17">%date17%</textarea><br />
+<textarea name="date18" cols="5" rows="1" id="date18">%date18%</textarea></td>
+<td bgcolor="#FFFFFF"><p>10<br />
+<textarea name="date19" cols="5" rows="1" id="date19">%date19%</textarea><br />
+<textarea name="date20" cols="5" rows="1" id="date20">%date20%</textarea></td>
+<td bgcolor="#FFFFFF"><p>11<br />
+<textarea name="date21" cols="5" rows="1" id="date21">%date21%</textarea><br />
+<textarea name="date22" cols="5" rows="1" id="date22">%date22%</textarea></td>
+<td bgcolor="#FFFFFF"><p>12<br />
+<textarea name="date23" cols="5" rows="1" id="date23">%date23%</textarea><br />
+<textarea name="date24" cols="5" rows="1" id="date24">%date24%</textarea></td>
+<td bgcolor="#FFFFFF"><p>13<br />
+<textarea name="date25" cols="5" rows="1" id="date25">%date25%</textarea><br />
+<textarea name="date26" cols="5" rows="1" id="date26">%date26%</textarea></td>
+<td bgcolor="#FFFFFF"><p>14<br />
+<textarea name="date27" cols="5" rows="1" id="date27">%date27%</textarea><br />
+<textarea name="date28" cols="5" rows="1" id="date28">%date28%</textarea></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF"><p>15<br />
+<textarea name="date29" cols="5" rows="1" id="date29">%date29%</textarea><br />
+<textarea name="date30" cols="5" rows="1" id="date30">%date30%</textarea></td>
+<td bgcolor="#FFFFFF"><p>16<br />
+<textarea name="date31" cols="5" rows="1" id="date31">%date31%</textarea><br />
+<textarea name="date32" cols="5" rows="1" id="date32">%date32%</textarea></td>
+<td bgcolor="#FFFFFF"><p>17<br />
+<textarea name="date33" cols="5" rows="1" id="date33">%date33%</textarea><br />
+<textarea name="date34" cols="5" rows="1" id="date34">%date34%</textarea></td>
+<td bgcolor="#FFFFFF"><p>18<br />
+<textarea name="date35" cols="5" rows="1" id="date35">%date35%</textarea><br />
+<textarea name="date36" cols="5" rows="1" id="date36">%date36%</textarea></td>
+<td bgcolor="#FFFFFF"><p>19<br />
+<textarea name="date37" cols="5" rows="1" id="date37">%date37%</textarea><br />
+<textarea name="date38" cols="5" rows="1" id="date38">%date38%</textarea></td>
+<td bgcolor="#FFFFFF"><p>20<br />
+<textarea name="date39" cols="5" rows="1" id="date39">%date39%</textarea><br />
+<textarea name="date40" cols="5" rows="1" id="date40">%date40%</textarea></td>
+<td bgcolor="#FFFFFF"><p>21<br />
+<textarea name="date41" cols="5" rows="1" id="date41">%date41%</textarea><br />
+<textarea name="date42" cols="5" rows="1" id="date42">%date42%</textarea></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF"><p>22<br />
+<textarea name="date43" cols="5" rows="1" id="date43">%date43%</textarea><br />
+<textarea name="date44" cols="5" rows="1" id="date44">%date44%</textarea></td>
+<td bgcolor="#FFFFFF"><p>23<br />
+<textarea name="date45" cols="5" rows="1" id="date45">%date45%</textarea><br />
+<textarea name="date46" cols="5" rows="1" id="date46">%date46%</textarea></td>
+<td bgcolor="#FFFFFF"><p>24<br />
+<textarea name="date47" cols="5" rows="1" id="date47">%date47%</textarea><br />
+<textarea name="date48" cols="5" rows="1" id="date48">%date48%</textarea></td>
+<td bgcolor="#FFFFFF"><p>25<br />
+<textarea name="date49" cols="5" rows="1" id="date49">%date49%</textarea><br />
+<textarea name="date50" cols="5" rows="1" id="date50">%date50%</textarea></td>
+<td bgcolor="#FFFFFF"><p>26<br />
+<textarea name="date51" cols="5" rows="1" id="date51">%date51%</textarea><br />
+<textarea name="date52" cols="5" rows="1" id="date52">%date52%</textarea></td>
+<td bgcolor="#FFFFFF"><p>27<br />
+<textarea name="date53" cols="5" rows="1" id="date53">%date53%</textarea><br />
+<textarea name="date54" cols="5" rows="1" id="date54">%date54%</textarea></td>
+<td bgcolor="#FFFFFF"><p>28<br />
+<textarea name="date55" cols="5" rows="1" id="date55">%date55%</textarea><br />
+<textarea name="date56" cols="5" rows="1" id="date56">%date56%</textarea></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF"><p>29<br />
+<textarea name="date57" cols="5" rows="1" id="date57">%date57%</textarea><br />
+<textarea name="date58" cols="5" rows="1" id="date58">%date58%</textarea></td>
+<td bgcolor="#FFFFFF"><p>30<br />
+<textarea name="date59" cols="5" rows="1" id="date59">%date59%</textarea><br />
+<textarea name="date60" cols="5" rows="1" id="date60">%date60%</textarea></td>
+<td bgcolor="#FFFFFF"><p>31<br />
+<textarea name="date61" cols="5" rows="1" id="date61">%date61%</textarea><br />
+<textarea name="date62" cols="5" rows="1" id="date62">%date62%</textarea></td>
+<td bgcolor="#FFFFFF">&nbsp;</td>
+<td bgcolor="#FFFFFF">&nbsp;</td>
+<td bgcolor="#FFFFFF">&nbsp;</td>
+<td bgcolor="#FFFFFF">&nbsp;</td>
+</tr>
+
+
+
+<tr>
+<td colspan="8" align="center" bgcolor="#FFFFFF"><br />
+<input type="submit" name="button" id="button" value="登録"  style="width:100px"/ ></td>
+</tr>
+</table>
+</form>

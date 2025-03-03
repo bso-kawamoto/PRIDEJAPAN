@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<style type="text/css">
+<!--
+a {
+	text-decoration: none;
+}
+-->
+</style>
+<script type="text/javascript">
+var QS = new Array;
+var sourceobj;
+if (location.search.length > 1) {
+var m_Array = location.search.substr(1).split("&"); 
+for (idx in m_Array) {
+var str=m_Array[idx]+"";
+QS.push(str.split("="));
+}
+for (idx in QS) {
+if(QS[idx][0] == "sourceobj"){sourceobj=QS[idx][1];}
+}
+}
+
+
+targetobj = "decoedit";
+function decosubmit(){
+window.opener.document.getElementById(sourceobj).value = document.getElementById(targetobj).value;
+window.close();
+}	//func
+</script>
+</head>
+
+<body>
+
+<form>
+
+<!-- decobuttonシステム -->
+<script type="text/javascript" src="webpaldecobutton.js"></script>
+<table width="840" border="0" cellpadding="8" cellspacing="1" bgcolor="#666666">
+<tr>
+<td bgcolor="#FFFFFF" align="center">編集欄</td>
+<td bgcolor="#FFFFFF" align="center">プレビュー</td>
+</tr>
+<tr>
+<td width="50%" valign="top" bgcolor="#FFFFFF"><textarea name="decoedit" cols="46" rows="20" id="decoedit" ></textarea>
+</p></td>
+<td width="50%" valign="top" bgcolor="#FFFFFF"><div id="decobuttonpreview"></div></td>
+</tr>
+<tr>
+<td colspan="2" align="center" valign="top" bgcolor="#FFFFFF"><input type="button" name="button" id="button" value="OK" style="width:100px" onClick="decosubmit()" ></td>
+</tr>
+</table>
+<!-- /decobuttonシステム -->
+
+</form>
+
+</body>
+</html>
